@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Split Card</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Roboto', sans-serif;
+        scroll-behavior: smooth;
+    }
+    body{
+        background-color: #212529;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .container{
+        width: 200px;
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        gap: 24px;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+    }
+    .card{
+        min-height: 200px;
+        min-width: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        font-weight: bold;
+        border-radius: 16px;
+        color: #fff;
+        scroll-snap-align: start;
+        transition: all 0.2s;
+        cursor: pointer;
+    }
+    .card:nth-child(1){
+        background-color: #fb8500;
+    }
+    .card:nth-child(2){
+        background-color: #219ebc;
+    }
+    .card:nth-child(3){
+        background-color: #ffb703;
+    }
+    .card:nth-child(4){
+        background-color: #d90429;
+    }
+    .card:nth-child(5){
+        background-color: #7209b7;
+    }
+    .card:nth-child(6){
+        background-color: #70e000;
+    }
+    .card:nth-child(7){
+        background-color: #27187e;
+    }
+    .container::-webkit-scrollbar{
+        height: 10px;
+    }
+    .container::-webkit-scrollbar-track{
+        background-color: #313852;
+        border-radius: 50vh;
+    }
+    .container::-webkit-scrollbar-thumb{
+        background-color: white;
+        border-radius: 50vh;
+    }
+
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">HTML</div>
+        <div class="card">CSS</div>
+        <div class="card">JAVASCRIPT</div>
+        <div class="card">MySQL</div>
+        <div class="card">React JS</div>
+        <div class="card">Mongo DB</div>
+        <div class="card">Node JS</div>
+    </div>
+</body>
+</html>
